@@ -14,12 +14,12 @@ html.no-js
     title
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Raleway:100')
     link(rel='stylesheet', href='components/normalize-css/normalize.css')
     link(rel='stylesheet', href='styles/main.css')
   body(ng-app='weddingApp')
-    div(ng-view)
-      | Blah
-
+    block content
+    
     script(src='scripts/vendor/angular.js')
     script(src='scripts/app.js')
     script(src='scripts/controllers/main.js')
