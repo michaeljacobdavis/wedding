@@ -16,30 +16,88 @@ html {
 }
 
 .menu {
-	width: 18%;
-	min-width: 150px;
 	background: rgba(10,10,10,0.7);
-	margin-left: 5%;
-	height: 100%;
-	position: absolute;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	color: #fff;
 
 }
+
 .menu h1 {
-	font-size: 1.7em;
-	letter-spacing: -.1em;
+	font-size: 2.1em;
+	letter-spacing: -0.05em;
 	text-align: center;
 	text-shadow: 0px -1px 0px #000;
+	font-weight: 400;
+	margin: .5em 0 0 0;
+	line-height: 1em;
+}
+
+.menu ul {
+	padding: 0;
+	margin: 0;
+	border-top: 1px dashed rgba(255,255,255,0.4);
+}
+.menu ul li {
+	list-style-type: none;
+	font-size: 1.6em;
+	line-height: 2em;
+	
+}
+
+.menu ul li a {
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+
+.menu ul li a:hover {
+	color: rgba(255,255,255,1);
 }
 
 .content {
-	width: 40%;
-	min-width: 400px;
-	height: 100%;
-	margin-left: 25%;
 	background: rgba(255,255,255,0.4);
-	position: absolute;
+}
+
+	.content p, .content h2 {
+		margin: 20px;
+	}
+
+@media (min-width: 767px) {
+	
+	.menu {
+		width: 18%;
+		min-width: 150px;
+		height: 100%;
+		float: left;
+	}
+
+	.content {
+		width: 40%;
+		min-width: 400px;
+		height: 100%;
+		float: left;
+	}
+
+	.menu ul {
+		margin: 2em 1em 0;
+	}
+}
+@media (max-width: 767px) {
+	.menu {
+		width: 100%;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.menu ul {
+		margin: 2em 0 0;
+	}
+
+	.menu ul li a {
+		display: block;
+		text-align: center;
+	}
 }
 
 /**

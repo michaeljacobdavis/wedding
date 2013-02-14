@@ -1,6 +1,17 @@
 extends layout
 
 block content
-	div.menu
-		h1 Loren and Mike's <br /> Wedding
+	div.menu.cf
+		h1 Loren and Mike's Wedding
+
+		ul
+			li 
+				a(href='#/') Our Story
+			li 
+				a(href='#/rsvp') RSVP
+			li 
+				a(href='#/registry') Gift Ideas
+			li 
+				a(href='#/directions') Directions
+				
 	div.content.cf(ng-view)
