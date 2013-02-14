@@ -5,6 +5,7 @@ body, html {
 	height:100%; 
 	position: relative;
 	width:100%;
+	background: transparent;
 }
 
 html { 
@@ -17,16 +18,15 @@ html {
 
 .menu {
 	background: rgba(10,10,10,0.7);
-	font-family: 'Josefin Sans', sans-serif;
 	color: #fff;
-
+	font-family: 'Josefin Sans', sans-serif;
+	text-shadow: 0px -1px 0px #000;
 }
 
 .menu h1 {
-	font-size: 2.1em;
+	font-size: 2.4em;
 	letter-spacing: -0.05em;
 	text-align: center;
-	text-shadow: 0px -1px 0px #000;
 	font-weight: 400;
 	margin: .5em 0 0 0;
 	line-height: 1em;
@@ -39,7 +39,7 @@ html {
 }
 .menu ul li {
 	list-style-type: none;
-	font-size: 1.6em;
+	font-size: 1.9em;
 	line-height: 2em;
 	
 }
@@ -54,11 +54,16 @@ html {
 }
 
 .content {
-	background: rgba(255,255,255,0.4);
+	background: rgba(255,255,255,0.6);
+	text-shadow: rgba(255,255,255,0.4) 0 1px 1px;
 }
+	.content .hero-unit {
+		background: transparent;
+	}
 
-	.content p, .content h2 {
-		margin: 20px;
+	.content p {
+		font-size: 1.2em;
+		line-height: 1.5em;
 	}
 
 @media (min-width: 767px) {
