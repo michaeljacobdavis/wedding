@@ -1,32 +1,31 @@
 div.hero-unit
 	h2 RSVP
 
-	form(ngSubmit='click', action='https://docs.google.com/spreadsheet/formResponse?formkey=dFRORWZQSHh5aDJiM3dLUU9ldmlQNmc6MQ&theme=0AX42CRMsmRFbUy0yMjdiMTQ4Yi0zZjUwLTQ5NTUtOGVmNC05ODNlZTUxYTViYzA&embedded=true&ifq', method='POST')
+	form(ng-submit='save()', method='POST')
 		
 		label Your Name
-		input(type='text', name='entry.0.single', required)
+		input(type='text', name='entry.0.single', required, ng-model='entry.0.single')
 
-		fieldset
+		fieldset(ng-model='entry.1')
 			legend Will you be attending?
 
 			label.radio
-				input(type='radio', name='entry.1.group', value='Happily Accepts', checked)
+				input(type='radio', name='entry.1.group', value='Happily Accepts', checked, ng-model='entry.1.group'))
 				| Happily Accepts
 			
 			label.radio
-				input(type='radio', name='entry.1.group', value='Regretfully Declines')
+				input(type='radio', name='entry.1.group', value='Regretfully Declines', ng-model='entry.1.group'))
 				| Regretfully Declines
 
 		br
 
 		label How many total in your group?
-		select(name='entry.2.single')
+		select(name='entry.2.single', ng-model='entry.2.single'))
 			option 1
 			option 2
 			option 3
 			option 4
 			option 5
-			option 6 or more
 
 		br
 
