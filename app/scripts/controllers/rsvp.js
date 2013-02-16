@@ -1,5 +1,10 @@
+/*global weddingApp*/
+
+'use strict';
 
 weddingApp.controller('RsvpCtrl', function($scope) {
-	'use strict';
-	
+
+	$scope.save = function() {
+		debugger;
+	};
 });
