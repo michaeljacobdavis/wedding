@@ -3,15 +3,14 @@ extends layout
 block content
 	div.menu.cf
 		h1 Loren and Mike's Wedding
-
-		ul
-			li 
-				a(href='#/') Our Story
-			li 
+		ul(bs-navbar)
+			li(data-match-route="/ourstory") 
+				a(href='#/ourstory') Our Story
+			li(data-match-route="/rsvp") 
 				a(href='#/rsvp') RSVP
-			li 
+			li(data-match-route="/registry") 
 				a(href='#/registry') Gift Ideas
-			li 
+			li(data-match-route="/directions") 
 				a(href='#/directions') Directions
-				
+		
 	div.content.cf(ng-view)

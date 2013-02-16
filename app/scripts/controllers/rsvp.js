@@ -1,5 +1,5 @@
-'use strict';
 
 weddingApp.controller('RsvpCtrl', function($scope) {
-
+	'use strict';
+	
 });

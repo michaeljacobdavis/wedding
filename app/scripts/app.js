@@ -1,9 +1,11 @@
+/*global angular*/
+
 'use strict';
 
-var weddingApp = angular.module('weddingApp', [])
+var weddingApp = angular.module('weddingApp', ['$strap.directives'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/ourstory', {
         templateUrl: 'partials/ourstory',
         controller: 'OurStoryCtrl'
       })
@@ -20,6 +22,6 @@ var weddingApp = angular.module('weddingApp', [])
         controller: 'RsvpCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/ourstory'
       });
   }]);

@@ -48,6 +48,10 @@ html {
 	color: rgba(255,255,255,0.7);
 	text-decoration: none;
 }
+	.menu ul li.active a {
+		font-weight: bold;
+		color: #fff;
+	}
 
 .menu ul li a:hover {
 	color: rgba(255,255,255,1);
@@ -59,6 +63,7 @@ html {
 }
 	.content .hero-unit {
 		background: transparent;
+		padding-top: 2em;
 	}
 
 	.content p {
