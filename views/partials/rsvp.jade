@@ -4,23 +4,23 @@ div.hero-unit
 	form(ng-submit='save()', method='POST')
 		
 		label Your Name
-		input(type='text', name='entry.0.single', required, ng-model='entry.0.single')
+		input(type='text', name='name', required, ng-model='entry.name')
 
-		fieldset(ng-model='entry.1')
+		fieldset
 			legend Will you be attending?
 
 			label.radio
-				input(type='radio', name='entry.1.group', value='Happily Accepts', checked, ng-model='entry.1.group'))
+				input(type='radio', name='coming', value='Happily Accepts', checked, ng-model='entry.coming'))
 				| Happily Accepts
 			
 			label.radio
-				input(type='radio', name='entry.1.group', value='Regretfully Declines', ng-model='entry.1.group'))
+				input(type='radio', name='coming', value='Regretfully Declines', ng-model='entry.coming'))
 				| Regretfully Declines
 
 		br
 
 		label How many total in your group?
-		select(name='entry.2.single', ng-model='entry.2.single'))
+		select(name='howMany', ng-model='entry.howMany'))
 			option 1
 			option 2
 			option 3

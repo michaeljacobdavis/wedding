@@ -9,6 +9,7 @@ body, html {
 }
 
 html { 
+	/* Move image to media queries */
 	background: #e8e4e5 url(images/bg.jpg) no-repeat bottom right fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
