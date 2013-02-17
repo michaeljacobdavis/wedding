@@ -21,6 +21,10 @@ var weddingApp = angular.module('weddingApp', ['$strap.directives'])
         templateUrl: 'partials/rsvp',
         controller: 'RsvpCtrl'
       })
+      .when('/rsvp/thanks', {
+        templateUrl: 'partials/rsvp-thanks',
+        controller: 'RsvpCtrl'
+      })
       .otherwise({
         redirectTo: '/ourstory'
       });
