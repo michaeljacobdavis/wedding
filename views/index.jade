@@ -4,13 +4,13 @@ block content
   div.menu.cf
     h1 Loren and Mike's Wedding
     ul(bs-navbar)
-      li(data-match-route="/ourstory") 
+      li(data-match-route="/ourstory.*") 
         a(href='#/ourstory') Our Story
-      li(data-match-route="/rsvp") 
+      li(data-match-route="/rsvp.*") 
         a(href='#/rsvp') RSVP
-      li(data-match-route="/registry") 
+      li(data-match-route="/registry.*") 
         a(href='#/registry') Gift Ideas
-      li(data-match-route="/directions") 
+      li(data-match-route="/directions.*") 
         a(href='#/directions') Directions
     
   div.content.cf(ng-view)

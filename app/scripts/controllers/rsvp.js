@@ -6,7 +6,7 @@ weddingApp.controller('RsvpCtrl', function($scope, $http, $location) {
 
   // Defaults
   $scope.entry = {
-    coming: "Happily Accepts",
+    coming: true,
     howMany: 2
   };
 
@@ -15,7 +15,7 @@ weddingApp.controller('RsvpCtrl', function($scope, $http, $location) {
     // Todo: Handle error
 
     $http.post(url, $scope.entry).success(function(data){
-      if($scope.entry.coming === 'true') $location.path('/rsvp/going');
+      if($scope.entry.coming) $location.path('/rsvp/going');
       else $location.path('/rsvp/notgoing');
     });
   };
