@@ -21,8 +21,12 @@ var weddingApp = angular.module('weddingApp', ['$strap.directives'])
         templateUrl: 'partials/rsvp',
         controller: 'RsvpCtrl'
       })
-      .when('/rsvp/thanks', {
-        templateUrl: 'partials/rsvp-thanks',
+      .when('/rsvp/going', {
+        templateUrl: 'partials/rsvp-going',
+        controller: 'RsvpCtrl'
+      })
+      .when('/rsvp/notgoing', {
+        templateUrl: 'partials/rsvp-notgoing',
         controller: 'RsvpCtrl'
       })
       .otherwise({

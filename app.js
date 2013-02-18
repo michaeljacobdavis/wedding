@@ -44,7 +44,6 @@ app.get('/partials/:name', routes.partials);
 // RSVP API
 app.post('/api/rsvp', function (req, res) {
   new Rsvp(req.body).save(function(err, rsvp){
-    console.log("saved");
     if (err) res.send(500, err);
     else res.send(201, rsvp);
   });

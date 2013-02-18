@@ -1,32 +1,32 @@
 div.hero-unit
-	h2 RSVP
+  h2 RSVP
 
-	form(ng-submit='save()', method='POST')
-		
-		label Your Name
-		input(type='text', name='name', required, ng-model='entry.name')
+  form(ng-submit='save()', method='POST')
+    
+    label Your Name
+    input(type='text', name='name', required, ng-model='entry.name')
 
-		fieldset
-			legend Will you be attending?
+    fieldset
+      legend Will you be attending?
 
-			label.radio
-				input(type='radio', name='coming', value='Happily Accepts', ng-model='entry.coming', checked))
-				| Happily Accepts
-			
-			label.radio
-				input(type='radio', name='coming', value='Regretfully Declines', ng-model='entry.coming'))
-				| Regretfully Declines
+      label.radio
+        input(type='radio', name='coming', value='true', ng-model='entry.coming', checked))
+        | I'll be there
+      
+      label.radio
+        input(type='radio', name='coming', value='false', ng-model='entry.coming'))
+        | Sorry, can't make it
 
-		br
+    br
 
-		label How many total in your group?
-		select(name='howMany', ng-model='entry.howMany'))
-			option 1
-			option 2
-			option 3
-			option 4
-			option 5
+    label How many total in your group?
+    select(name='howMany', ng-model='entry.howMany'))
+      option 1
+      option 2
+      option 3
+      option 4
+      option 5
 
-		br
+    br
 
-		input.btn.btn-primary(type='submit', name='submit', value='Submit')
+    input.btn.btn-primary(type='submit', name='submit', value='Submit')
