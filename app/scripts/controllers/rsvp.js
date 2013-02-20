@@ -13,7 +13,6 @@ weddingApp.controller('RsvpCtrl', function($scope, $http, $location) {
   var url = '/api/rsvp';
   $scope.save = function() {
     // Todo: Handle error
-
     $http.post(url, $scope.entry).success(function(data){
       if($scope.entry.coming) $location.path('/rsvp/going');
       else $location.path('/rsvp/notgoing');

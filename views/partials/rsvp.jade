@@ -1,7 +1,7 @@
 div.hero-unit
   h2 RSVP
 
-  form(ng-submit='save()', method='POST')
+  form(ng-submit='save()', method='POST', name='rsvpForm')
     
     label Your Name
     input(type='text', name='name', required, ng-model='entry.name')
@@ -29,4 +29,4 @@ div.hero-unit
 
     br
 
-    input.btn.btn-primary(type='submit', name='submit', value='Submit')
+    input.btn.btn-primary(type='submit', name='submit', value='Submit', ng-disabled='rsvpForm.$invalid')
