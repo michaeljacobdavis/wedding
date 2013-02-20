@@ -18,6 +18,7 @@ html {
 }
 
 .menu {
+	background: #000;
 	background: rgba(10,10,10,0.7);
 	color: #fff;
 	font-family: 'Josefin Sans', sans-serif;
@@ -59,6 +60,7 @@ html {
 }
 
 .content {
+	background: #fff;
 	background: rgba(255,255,255,0.6);
 	text-shadow: rgba(255,255,255,0.4) 0 1px 1px;
 }

@@ -5,6 +5,7 @@
     "angular-strap": "~0.6.6",
     "jquery": "~1.9.1",
     "bootstrap": "~2.3.0",
-    "normalize-css": "~2.1.0"
+    "normalize-css": "~2.1.0",
+    "respond": "~1.2.0"
   }
 }
