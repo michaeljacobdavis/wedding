@@ -120,6 +120,7 @@ html {
 
 #map {
   height: 300px;
+  margin-bottom: 20px;
 }
 /**
  * For modern browsers

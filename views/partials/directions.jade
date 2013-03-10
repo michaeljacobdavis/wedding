@@ -1,3 +1,5 @@
 div.hero-unit
   h2 Directions
+  h4(ng-show='model.distance') It's just {{ model.distance }} from where you are!
   div#map
+  a.btn.btn-info(href='https://maps.google.com/maps?daddr=676%20osbourne%20st%20vista%20ca') Get Directions
