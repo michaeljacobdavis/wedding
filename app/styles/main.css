@@ -8,7 +8,7 @@ body, html {
 	background: transparent;
 }
 
-html { 
+html {
 	/* Move image to media queries */
 	background: #e8e4e5 url(images/bg.jpg) no-repeat bottom right fixed; 
 	-webkit-background-size: cover;
@@ -118,6 +118,9 @@ html {
 	}
 }
 
+#map {
+  height: 300px;
+}
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the
