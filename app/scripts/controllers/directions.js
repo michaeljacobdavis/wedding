@@ -3,8 +3,17 @@
 'use strict';
 
 weddingApp.controller('DirectionsCtrl', function($scope) {
-  var map = L.map('map').setView([33.238251,-117.236256], 10);
-  L.tileLayer('http://{s}.tile.cloudmade.com/efbcd8f7d1d746819abd2aee833d814b/997/256/{z}/{x}/{y}.png').addTo(map);
-  var marker = L.marker([33.238251,-117.236256]).addTo(map);
-  marker.bindPopup('676 Osborne St, Vista, CA 92084');
+  var destinationLatLang = new google.maps.LatLng(33.238251,-117.236256);
+  var mapOptions = {
+    center: destinationLatLang,
+    zoom: 15,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: destinationLatLang,
+      map: map,
+      title:"Hello World!"
+  });
 });
