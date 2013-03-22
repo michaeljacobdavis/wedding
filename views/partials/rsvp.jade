@@ -19,13 +19,14 @@ div.hero-unit
 
     br
 
-    label How many total in your group?
-    select(name='howMany', ng-model='entry.howMany'))
-      option 1
-      option 2
-      option 3
-      option 4
-      option 5
+    div(ng-show='entry.coming')
+      label How many total in your group?
+      select(name='howMany', ng-model='entry.howMany'))
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
 
     br
 
