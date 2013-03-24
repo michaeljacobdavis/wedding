@@ -29,7 +29,11 @@ var weddingApp = angular.module('weddingApp', ['$strap.directives'])
         templateUrl: 'partials/rsvp-notgoing',
         controller: 'RsvpCtrl'
       })
+      .when('/error', {
+        templateUrl: 'partials/error',
+        controller: 'ErrorCtrl'
+      })
       .otherwise({
-        redirectTo: '/ourstory'
+        redirectTo: '/rsvp'
       });
   }]);
