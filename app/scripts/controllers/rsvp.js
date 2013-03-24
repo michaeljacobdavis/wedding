@@ -16,8 +16,6 @@ weddingApp.controller('RsvpCtrl', function($scope, $http, $location) {
     $http.post(url, $scope.entry).success(function(data){
       if($scope.entry.coming) $location.path('/rsvp/going');
       else $location.path('/rsvp/notgoing');
-    }).error(function(){
-      $location.path('/error');
     });
   };
 });
