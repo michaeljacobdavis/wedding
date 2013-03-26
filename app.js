@@ -39,6 +39,7 @@ app.configure(function(){
 
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
+app.get('/guestlist', routes.guestlist);
 
 
 // RSVP API
@@ -49,8 +50,6 @@ app.post('/api/rsvp', function (req, res) {
   });
 });
 
-
-// Delete before prod
 app.get('/api/rsvp', function (req, res) {
   Rsvp.find(function(err, rsvps){
     res.send(rsvps);

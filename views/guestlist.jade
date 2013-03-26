@@ -1,0 +1,41 @@
+
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Guest List
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width')
+
+    style
+      .coming { color: #000; }
+      li { color: #aaa; }
+
+  body
+    h1 Total:&nbsp;
+      span(data-bind='text: total')
+    ul(data-bind='foreach: guests')
+      li(data-bind='css: { coming: coming }')
+        span(data-bind='text: coming ? howMany : "&nbsp;&nbsp;"')
+        &nbsp;-&nbsp;
+        span(data-bind='text: name')
+
+    script(src='components/jquery/jquery.js')
+    script(src='components/knockout/build/output/knockout-latest.debug.js')
+    script
+      var viewModel = {
+        guests: ko.observableArray(),
+        total: ko.observable()
+      };
+
+      $.getJSON('/api/rsvp').done(function(data){
+        viewModel.guests(data);
+        var total = 0;
+        
+        $.each(data, function(index, value){
+          if(value.coming) total = total + value.howMany;
+        });
+        viewModel.total(total);
+      });
+      ko.applyBindings(viewModel);
